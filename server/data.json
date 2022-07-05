@@ -1,0 +1,53 @@
+{
+  "feeds": [
+    {
+      "id": 1,
+      "userName": "bora",
+      "profileImgUrl": "https://user-images.githubusercontent.com/34260967/174717616-aed62339-a269-46ce-8a51-ba93919d27f4.jpg",
+      "postImgUrl": "https://source.unsplash.com/random/200x200",
+      "postText": "hello im bora",
+      "like": "286",
+      "comment": [
+        {
+          "userName": "zzzz",
+          "text": "abcd"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "userName": "ddubi",
+      "profileImgUrl": "https://user-images.githubusercontent.com/34260967/174717616-aed62339-a269-46ce-8a51-ba93919d27f4.jpg",
+      "postImgUrl": "https://source.unsplash.com/random/2080x500",
+      "postText": "hi im ddubi. The lorem ipsum is a placeholder text used in publishing and graphic design. This filler text is a short paragraph that contains all the letters of the alphabet. The characters are spread out evenly so that the reader's attention is focused on the layout of the text instead of its content",
+      "like": "1,211",
+      "comment": []
+    },
+    {
+      "id": 3,
+      "userName": "nana",
+      "profileImgUrl": "https://user-images.githubusercontent.com/34260967/174717616-aed62339-a269-46ce-8a51-ba93919d27f4.jpg",
+      "postImgUrl": "https://source.unsplash.com/random/700x1080",
+      "postText": "everybody say h-e-l-l-o oooo~",
+      "like": "2,213",
+      "comment": []
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "userName": "qhtjd2131@gmail.com",
+      "passWord": "Abcd1234!"
+    },
+    {
+      "id": 2,
+      "userName": "aaa@bbb.com",
+      "passWord": "Abcd1234!"
+    },
+    {
+      "id": 3,
+      "userName": "qhtjd2131@nate.com",
+      "passWord": "Abcd1234!"
+    }
+  ]
+}
