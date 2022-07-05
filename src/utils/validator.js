@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const validator = {
+const Validator = {
   // 계정@도메인.최상위도메인
   emailValidate(value) {
     /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(value);
@@ -13,8 +13,8 @@ const validator = {
 
   // 공백 문자 제거
   whitespaceValidate(value) {
-    return value.trim() !== "" ? true : false;
+    return value.trim() !== '' ? true : false;
   },
 };
 
-export default validator;
+export default Validator;
