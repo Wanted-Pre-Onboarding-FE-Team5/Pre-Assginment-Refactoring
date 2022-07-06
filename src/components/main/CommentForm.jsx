@@ -13,11 +13,11 @@ const CommentForm = (props) => {
   const [commentArray, setCommentArray] = useState(comment);
 
   const {
-    value: commentInput,
     isValid: enteredCommentIsValid,
     valueChangeHandler: commentChangedHandler,
     inputBlurHandler: commentBlurHandler,
     reset: resetCommentInput,
+    getEnteredValue,
   } = useInput(whitespaceValidate);
 
   let formIsValid = false;
@@ -27,7 +27,7 @@ const CommentForm = (props) => {
     event.preventDefault();
     const newComment = {
       userName: window.localStorage.getItem('userEmail'),
-      text: commentInput,
+      text: getEnteredValue(),
     };
     uploadComment(newComment, feedId, () => {
       setCommentArray((comment) => [...comment, newComment]);

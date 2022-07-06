@@ -14,7 +14,10 @@ const Input = (props) => {
     valueChangeHandler: emailChangeHandler,
     inputBlurHandler: emailBlurHandler,
     reset: resetEmailInput,
+    
   } = useInput(emailValidate);
+
+  console.log(enteredEmail);
 
   const {
     value: enteredPassword,
@@ -43,14 +46,6 @@ const Input = (props) => {
     resetEmailInput();
     resetPasswordInput();
   };
-
-  const emailInputClasses = emailInputHasError
-    ? 'form-control invalid'
-    : 'form-control';
-
-  const passwordInputClasses = passwordInputHasError
-    ? 'form-control invalid'
-    : 'form-control';
 
   return (
     <InputContainer onSubmit={formSubmissionHandler}>
