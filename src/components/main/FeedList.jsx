@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import Feed from './Feed';
 import styled from 'styled-components';
 import { useEffect } from 'react';

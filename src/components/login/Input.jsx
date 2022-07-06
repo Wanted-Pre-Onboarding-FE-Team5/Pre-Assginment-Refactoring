@@ -14,10 +14,7 @@ const Input = (props) => {
     valueChangeHandler: emailChangeHandler,
     inputBlurHandler: emailBlurHandler,
     reset: resetEmailInput,
-    
   } = useInput(emailValidate);
-
-  console.log(enteredEmail);
 
   const {
     value: enteredPassword,

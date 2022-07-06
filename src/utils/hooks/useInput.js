@@ -12,7 +12,7 @@ const useInput = (validateValue) => {
 
   const getEnteredValue = () => {
     return enteredValue.current;
-  }
+  };
 
   const valueChangeHandler = (event) => {
     enteredValue.current = event.target.value;
@@ -35,7 +35,7 @@ const useInput = (validateValue) => {
     valueChangeHandler,
     inputBlurHandler,
     reset,
-    getEnteredValue
+    getEnteredValue,
   };
 };
 
