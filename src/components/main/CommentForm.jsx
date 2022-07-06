@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { VscSmiley } from 'react-icons/vsc';
 import useInput from '../../utils/hooks/useInput';
-import Validator from '../../utils/validator';
+import { whitespaceValidate } from '../../utils/Validator.js';
 import { uploadComment } from '../../utils/uploadComment';
 
 const CommentForm = (props) => {
@@ -15,7 +15,7 @@ const CommentForm = (props) => {
     valueChangeHandler: commentChangedHandler,
     inputBlurHandler: commentBlurHandler,
     reset: resetCommentInput,
-  } = useInput(Validator.whitespaceValidate);
+  } = useInput(whitespaceValidate);
 
   let formIsValid = false;
   if (enteredCommentIsValid) formIsValid = true;

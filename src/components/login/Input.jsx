@@ -1,18 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import useInput from '../../utils/hooks/useInput';
-import Validator from '../../utils/validator';
+import { emailValidate, passwordValidate } from '../../utils/Validator.js';
 
 const Input = (props) => {
   const { setFormIsValid } = props;
-  const {
-    value: enteredPassword,
-    isValid: enteredPasswordIsValid,
-    hasError: passwordInputHasError,
-    valueChangeHandler: passwordChangedHandler,
-    inputBlurHandler: passwordBlurHandler,
-    reset: resetPasswordInput,
-  } = useInput(Validator.passwordValidate);
 
   const {
     value: enteredEmail,
@@ -21,7 +13,16 @@ const Input = (props) => {
     valueChangeHandler: emailChangeHandler,
     inputBlurHandler: emailBlurHandler,
     reset: resetEmailInput,
-  } = useInput(Validator.emailValidate);
+  } = useInput(emailValidate);
+
+  const {
+    value: enteredPassword,
+    isValid: enteredPasswordIsValid,
+    hasError: passwordInputHasError,
+    valueChangeHandler: passwordChangedHandler,
+    inputBlurHandler: passwordBlurHandler,
+    reset: resetPasswordInput,
+  } = useInput(passwordValidate);
 
   let formIsValid = false;
   if (enteredPasswordIsValid && enteredEmailIsValid) {
@@ -33,20 +34,20 @@ const Input = (props) => {
     event.preventDefault();
     if (!enteredPasswordIsValid) return;
 
-    resetPasswordInput();
     resetEmailInput();
+    resetPasswordInput();
   };
-
-  const passwordInputClasses = passwordInputHasError
-    ? 'form-control invalid'
-    : 'form-control';
 
   const emailInputClasses = emailInputHasError
     ? 'form-control invalid'
     : 'form-control';
 
+  const passwordInputClasses = passwordInputHasError
+    ? 'form-control invalid'
+    : 'form-control';
+
   return (
-    <InputContainer>
+    <InputContainer onSubmit={formSubmissionHandler}>
       <InputCommon
         placeholder="Email"
         type="email"
