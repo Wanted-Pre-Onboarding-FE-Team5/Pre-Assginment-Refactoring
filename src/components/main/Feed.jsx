@@ -12,8 +12,6 @@ const Feed = (props) => {
   const { userName, profileImgUrl, postImgUrl, postText, like, comment } =
     props.feedData;
 
-  console.log(props.feedData);
-
   return (
     <FeedContainer isLoaded={isLoaded}>
       <ProfileContainer>

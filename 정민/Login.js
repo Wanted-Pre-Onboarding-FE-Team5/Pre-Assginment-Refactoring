@@ -1,6 +1,6 @@
-import "./Login.css";
-import useInput from "../../hooks/use-input";
-import Storage from "../Storage/Storage";
+import './Login.css';
+import useInput from '../../hooks/use-input';
+import Storage from '../Storage/Storage';
 
 const Login = ({ setIsLogin, setUserInfo }) => {
   // emailValidate: 계정@도메인.최상위도메인
@@ -42,7 +42,7 @@ const Login = ({ setIsLogin, setUserInfo }) => {
       return;
     }
 
-    const USER_KEY = "user";
+    const USER_KEY = 'user';
     Storage.setItem(USER_KEY, enteredEmail);
     setIsLogin(true);
     setUserInfo(Storage.getItem(USER_KEY));
@@ -52,12 +52,12 @@ const Login = ({ setIsLogin, setUserInfo }) => {
   };
 
   const passwordInputClasses = passwordInputHasError
-    ? "form-control invalid"
-    : "form-control";
+    ? 'form-control invalid'
+    : 'form-control';
 
   const emailInputClasses = emailInputHasError
-    ? "form-control invalid"
-    : "form-control";
+    ? 'form-control invalid'
+    : 'form-control';
 
   return (
     <div className="allDiv">

@@ -10,15 +10,12 @@ const FeedList = () => {
   useEffect(() => {
     getFeeds().then((res) => {
       setFeedData(res);
-      console.log(res);
     });
   }, []);
 
   return (
     <FeedListContainer>
-      {/* <Feed />
-      <Feed />
-      <Feed /> */}
+
       {feedData.map((data, index) => (
         <Feed key={index} feedData={data} />
       ))}
