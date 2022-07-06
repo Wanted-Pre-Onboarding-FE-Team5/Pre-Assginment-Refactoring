@@ -3,14 +3,17 @@ import styled from 'styled-components';
 import Button from './Button';
 import Input from './Input';
 import Logo from '../common/Logo';
+import { useState } from 'react';
 
 const Login = () => {
+  const [formIsValid, setFormIsValid] = useState(false);
+
   return (
     <LoginContainer>
       <Logo />
       <LoginForm>
-        <Input />
-        <Button />
+        <Input setFormIsValid={setFormIsValid} />
+        <Button formIsValid={formIsValid} />
       </LoginForm>
     </LoginContainer>
   );

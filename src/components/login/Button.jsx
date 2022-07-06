@@ -1,11 +1,14 @@
 import React, { useCallback } from 'react';
 import styled from 'styled-components';
 
-const Button = () => {
+const Button = (props) => {
+  const { formIsValid } = props;
   const buttonClickHandler = useCallback(() => {}, []);
   return (
     <ButtonContainer>
-      <LoginButton onClick={buttonClickHandler}>Login</LoginButton>
+      <LoginButton onClick={buttonClickHandler} disabled={!formIsValid}>
+        Login
+      </LoginButton>
     </ButtonContainer>
   );
 };

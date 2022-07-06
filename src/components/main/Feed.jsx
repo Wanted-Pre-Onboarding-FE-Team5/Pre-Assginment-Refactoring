@@ -7,10 +7,10 @@ import CommentForm from './CommentForm';
 
 const Feed = (props) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  // isLoading false 시 스타일 변경 필요
-
-  const { userName, profileImgUrl, postImgUrl, postText, like, comment } =
+  const { userName, profileImgUrl, postImgUrl, postText, like, comment, id } =
     props.feedData;
+
+  
 
   return (
     <FeedContainer isLoaded={isLoaded}>
@@ -42,7 +42,7 @@ const Feed = (props) => {
           <LikeCount>좋아요 {like}개</LikeCount>
         </PostContentContainer>
       </PostContainer>
-      <CommentForm comment={comment} />
+      <CommentForm comment={comment} feedId={id} />
     </FeedContainer>
   );
 };

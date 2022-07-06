@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { VscSmiley } from 'react-icons/vsc';
 import useInput from '../../utils/hooks/useInput';
-import Validator from '../../utils/Validator';
+import Validator from '../../utils/validator';
+import { uploadComment } from '../../utils/uploadComment';
 
 const CommentForm = (props) => {
-  const { comment } = props;
-
-  const [commentArray, setCommentArray] = useState([]);
+  const { comment, feedId } = props;
+  const [commentArray, setCommentArray] = useState(comment);
 
   const {
     value: commentInput,
@@ -18,7 +18,6 @@ const CommentForm = (props) => {
   } = useInput(Validator.whitespaceValidate);
 
   let formIsValid = false;
-
   if (enteredCommentIsValid) formIsValid = true;
 
   const formsubmissionHandler = (event) => {
@@ -28,10 +27,21 @@ const CommentForm = (props) => {
     resetCommentInput();
   };
 
+  const uploadButtonClickHandler = (event) => {
+    const newComment = {
+      //localstorage에서 받아 와야 합니다.
+      userName: 'localhost',
+      text: commentInput,
+    };
+    uploadComment(newComment, feedId, () => {
+      setCommentArray((comment) => [...comment, newComment]);
+    });
+  };
+
   return (
     <CommentFormContainer commentArray={commentArray}>
-      {comment.map((cmt, index) => (
-        <CommentListContainer key={index}>
+      {commentArray.map((cmt, index) => (
+        <CommentListContainer key={new Date() + index}>
           {cmt.userName}
           <CommentSpan>{cmt.text}</CommentSpan>
         </CommentListContainer>
@@ -46,7 +56,11 @@ const CommentForm = (props) => {
           onBlur={commentBlurHandler}
           value={commentInput}
         />
-        <Button type="submit" disabled={!formIsValid}>
+        <Button
+          type="submit"
+          disabled={!formIsValid}
+          onClick={uploadButtonClickHandler}
+        >
           게시
         </Button>
       </CommentInputForm>
@@ -97,6 +111,7 @@ export const Button = styled.button`
   background-color: transparent;
   font-size: 15px;
   font-weight: bold;
+  cursor: pointer;
   &.onComment {
     cursor: pointer;
     color: #0095f6;

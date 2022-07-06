@@ -4,13 +4,17 @@
       "id": 1,
       "userName": "bora",
       "profileImgUrl": "https://user-images.githubusercontent.com/34260967/174717616-aed62339-a269-46ce-8a51-ba93919d27f4.jpg",
-      "postImgUrl": "https://source.unsplash.com/random/200x200",
+      "postImgUrl": "https://source.unsplash.com/random/400x400",
       "postText": "hello im bora",
       "like": "286",
       "comment": [
         {
           "userName": "zzzz",
           "text": "abcd"
+        },
+        {
+          "userName": "localhost",
+          "text": "fff"
         }
       ]
     },
@@ -31,6 +35,34 @@
       "postText": "everybody say h-e-l-l-o oooo~",
       "like": "2,213",
       "comment": []
+    },
+    {
+      "id": 4,
+      "userName": "bora",
+      "profileImgUrl": "https://user-images.githubusercontent.com/34260967/174717616-aed62339-a269-46ce-8a51-ba93919d27f4.jpg",
+      "postImgUrl": "https://source.unsplash.com/random/400x400",
+      "postText": "hello im bora",
+      "like": "286",
+      "comment": [
+        {
+          "userName": "zzzz",
+          "text": "abcd"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "userName": "bora",
+      "profileImgUrl": "https://user-images.githubusercontent.com/34260967/174717616-aed62339-a269-46ce-8a51-ba93919d27f4.jpg",
+      "postImgUrl": "https://source.unsplash.com/random/700x400",
+      "postText": "hello im bora",
+      "like": "286",
+      "comment": [
+        {
+          "userName": "zzzz",
+          "text": "abcd"
+        }
+      ]
     }
   ],
   "users": [
