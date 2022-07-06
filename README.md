@@ -1,7 +1,24 @@
-# :: 원티드 프리온보딩 프론트엔드 코스 사전과제 리팩토링 - 5팀 가보작5해보작5팀
+# 원티드 프리온보딩 프론트엔드 코스 사전과제 리팩토링 - 5팀 가보작5해보작5팀
+> 5주간의 원티드 프리온보딩 코스에 참여하는 가보작5해보작5팀입니다. (수정예정)
 
-## Description
-- 어떤 과제 했는지 작성
+
+![](../header.png)
+
+## 사전과제 화면
+
+스크린 샷 첨부
+
+
+## 개발 환경 설정
+
+```sh
+make install
+npm start
+```
+
+## 정보
+
+가보작5해보작5팀 – https://axiomatic-bunny-1ec.notion.site/5-5-ba59637024ee4d16bcddea9d0f6777f6
 
 ## 프로젝트 트리구조
 ```bash
@@ -46,7 +63,8 @@
  ┗ 📜package.json
 ```
 
-## Assignment 1 - `Login`
+## 과제 수행 상세 설명
+### Assignment 1 - `Login`
 
 - 로그인 컴포넌트를 개발합니다. (최소화 - `input` 2개, `button` 1개)
 - 약간의 랜더링 최적화를 고려해주세요. (Hint: Ref 사용)
@@ -55,7 +73,7 @@
   - 메인 페이지로 이동합니다.(로그인이 완료되면)
   - 반응형 CSS 적용은 하지 않으셔도 좋습니다. 해당 페이지는 반응형 CSS를 평가하지 않습니다.
 
-## Assignment2 - `GNB`
+### Assignment2 - `GNB`
 
 - 로그인 후 이동하는 메인페이지의 GNB를 구현해주세요.
 - 구현 시 스크롤에 관계 없이 화면 상단에 고정되는 `sticky` GNB 를 구현해주세요.
@@ -65,7 +83,7 @@
   - (가운데 검색바는 `input` 요소로만 만들어주세요. 기능은 X)
   - (아이콘은 자유롭게 사용하셔도 괜찮습니다. 아이콘 라이브러리 설치 O)
 
-## Assignment3 - `Validation`
+### Assignment3 - `Validation`
 
 - 이메일과 비밀번호의 유효성을 확인합니다.
   - 이메일 조건 - `@` , `.` 포함
@@ -82,13 +100,13 @@
   - 정규표현식 사용
   - Validation 함수 분리
 
-## Assignment4 - `Routing`
+### Assignment4 - `Routing`
 
 - 로그인,로그아웃 시 라우팅 로직을 통해 페이지가 이동 되도록 구현해주세요. (Local Storage)
 - 로그인이 완료되면 라우터에서 Main Page로 이동되어야 합니다. (history push 사용 X)
 - 로그아웃되면 (Local Storage가 삭제되면) Login Page로 이동되어야 합니다.(history push 사용 X)
 
-## Assignment5 - `Feeds`
+### Assignment5 - `Feeds`
 
 - 피드 컴포넌트를 개발합니다.
 - 레이아웃을 인스타그램과 동일하게 구현해주시면 됩니다. (픽셀 단위까지 맞추실 필요는 없으나 보기에 자연스럽도록 개발해주세요.)
