@@ -1,23 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { VscSmiley } from 'react-icons/vsc';
+import useInput from '../../utils/hooks/useInput';
+import Validator from '../../utils/Validator';
 
 const CommentForm = (props) => {
   const { comment } = props;
 
+  const [commentArray, setCommentArray] = useState([]);
+
+  const {
+    value: commentInput,
+    isValid: enteredCommentIsValid,
+    valueChangeHandler: commentChangedHandler,
+    inputBlurHandler: commentBlurHandler,
+    reset: resetCommentInput,
+  } = useInput(Validator.whitespaceValidate);
+
+  let formIsValid = false;
+
+  if (enteredCommentIsValid) formIsValid = true;
+
+  const formsubmissionHandler = (event) => {
+    event.preventDefault();
+
+    setCommentArray((commentValueList) => [...commentValueList, commentInput]);
+    resetCommentInput();
+  };
+
   return (
-    <CommentFormContainer>
+    <CommentFormContainer commentArray={commentArray}>
       {comment.map((cmt, index) => (
         <CommentListContainer key={index}>
           {cmt.userName}
           <CommentSpan>{cmt.text}</CommentSpan>
         </CommentListContainer>
       ))}
-     
-      <CommentInputForm>
+
+      <CommentInputForm onSubmit={formsubmissionHandler}>
         <VscSmiley size="27" />
-        <Input type="input" placeholder="댓글 달기..." />
-        <Button type="submit">게시</Button>
+        <Input
+          type="input"
+          placeholder="댓글 달기..."
+          onChange={commentChangedHandler}
+          onBlur={commentBlurHandler}
+          value={commentInput}
+        />
+        <Button type="submit" disabled={!formIsValid}>
+          게시
+        </Button>
       </CommentInputForm>
     </CommentFormContainer>
   );
