@@ -1,53 +1,57 @@
-<<<<<<< HEAD
-=======
 # 🖐🏻 5팀 가보작오해보작오팀
-**Week 1-1. 선발 과제 리팩토링 (2022.07.04 ~ 06)**  
+
+**Week 1-1. 선발 과제 리팩토링 (2022.07.04 ~ 06)**
 
 &nbsp;
 
 # ✅ 리팩토링 전 논의 한 사항
 
-저희 팀은 ‘어떤 기준을 가지고 리팩토링 할 것인가'를 염두에 두고 시작했습니다. 
-지금은 작은 프로젝트이지만 후에 서비스를 확장하게 된다면 어떤 기능이든 추가하기 용이하도록 방향성을 설정했습니다. 
-또한 기존의 사전 과제 평가 항목이었던 코드의 일관성, 가독성, 함수 분리 등도 고려하여 코드를 작성하였습니다. 
+저희 팀은 ‘어떤 기준을 가지고 리팩토링 할 것인가'를 염두에 두고 시작했습니다.
+지금은 작은 프로젝트이지만 후에 서비스를 확장하게 된다면 어떤 기능이든 추가하기 용이하도록 방향성을 설정했습니다.
+또한 기존의 사전 과제 평가 항목이었던 코드의 일관성, 가독성, 함수 분리 등도 고려하여 코드를 작성하였습니다.
+
 > 논의 결과 크게 아래와 같은 부분을 수정했습니다.
 
 - 디렉토리 구성
-    - components
-        - 두번 이상 반복된다면 컴포넌트화 하여 재사용성을 높였습니다.
-        - common
-            - Logo.jsx
-        - login
-            - LoginPage에 사용될 컴포넌트들을 명시적으로 분리했고 Login.jsx에 기능을 구현했습니다.
-            - Button.jsx
-            - Login.jsx
-            - Input.jsx
-        - main
-            - MainPage에 사용될 컴포넌트들을 명시적으로 분리했고 Main.jsx에 기능을 구현했습니다.
-            - CommentForm.jsx
-            - Feed.jsx
-            - FeedList.jsx
-            - GNB.jsx
-            - Main.jsx
-    - pages
-        - App.js에 라우팅할 페이지로 구성했습니다.
-        - LoginPage.jsx
-        - MainPage.jsx
-    - utils
-        - custom hook과 각종 함수들을 분리했습니다.
+
+  - components
+    - 두번 이상 반복된다면 컴포넌트화 하여 재사용성을 높였습니다.
+    - common
+      - Logo.jsx
+    - login
+      - LoginPage에 사용될 컴포넌트들을 명시적으로 분리했고 Login.jsx에 기능을 구현했습니다.
+      - Button.jsx
+      - Login.jsx
+      - Input.jsx
+    - main
+      - MainPage에 사용될 컴포넌트들을 명시적으로 분리했고 Main.jsx에 기능을 구현했습니다.
+      - CommentForm.jsx
+      - Feed.jsx
+      - FeedList.jsx
+      - GNB.jsx
+      - Main.jsx
+  - pages
+    - App.js에 라우팅할 페이지로 구성했습니다.
+    - LoginPage.jsx
+    - MainPage.jsx
+  - utils
+    - custom hook과 각종 함수들을 분리했습니다.
 
 - globalStyles 설정
-    - 전역으로 사용할 속성을 설정했습니다.
-    - 반복되는 속성 (ex. 색상) 을 변수로 지정하여 효율을 높였습니다.
+
+  - 전역으로 사용할 속성을 설정했습니다.
+  - 반복되는 속성 (ex. 색상) 을 변수로 지정하여 효율을 높였습니다.
 
 - json server 사용
-    - 새로 업데이트 된 데이터(ex. 댓글)를 렌더링 후에도 보존할 수 있도록 json server를 사용하여 데이터를 받아왔습니다.
+
+  - 새로 업데이트 된 데이터(ex. 댓글)를 렌더링 후에도 보존할 수 있도록 json server를 사용하여 데이터를 받아왔습니다.
 
 - custom hooks 사용
-    - useInput 이라는 custom hook을 만들어 Input을 관리하는 기능을 구현했습니다.
+
+  - useInput 이라는 custom hook을 만들어 Input을 관리하는 기능을 구현했습니다.
 
 - styled-components 사용
-    - 컴포넌트 재사용성을 고려하여 일반 css가 아닌 styled-components를 사용했습니다.
+  - 컴포넌트 재사용성을 고려하여 일반 css가 아닌 styled-components를 사용했습니다.
 
 ![](../header.png)
 
@@ -76,6 +80,7 @@ https://www.notion.so/5-5-ba59637024ee4d16bcddea9d0f6777f6
 &nbsp;
 
 ## 프로젝트 트리구조
+
 ```bash
 📦wanted-pre-onboarding-fe
  ┣ 📂public
@@ -121,7 +126,7 @@ https://www.notion.so/5-5-ba59637024ee4d16bcddea9d0f6777f6
 ## Assignment 1 - `Login`
 
 - 로그인 컴포넌트를 개발합니다. (최소화 - `input` 2개, `button` 1개)
-<img width="700" alt="원티드1" src="https://user-images.githubusercontent.com/47774766/177487346-f991c3e2-00b8-44fe-99e9-64e2eb12a424.png">
+  <img width="700" alt="원티드1" src="https://user-images.githubusercontent.com/47774766/177487346-f991c3e2-00b8-44fe-99e9-64e2eb12a424.png">
 
 - 약간의 랜더링 최적화를 고려해주세요. (Hint: Ref 사용)
 
@@ -133,8 +138,6 @@ https://www.notion.so/5-5-ba59637024ee4d16bcddea9d0f6777f6
 
   - 반응형 CSS 적용은 하지 않으셔도 좋습니다. 해당 페이지는 반응형 CSS를 평가하지 않습니다.
 
-
-
 ## Assignment2 - `GNB`
 
 - 로그인 후 이동하는 메인페이지의 GNB를 구현해주세요.
@@ -142,8 +145,6 @@ https://www.notion.so/5-5-ba59637024ee4d16bcddea9d0f6777f6
 <img width="700" alt="원티드2" src="https://user-images.githubusercontent.com/47774766/177487668-516a64ca-fe3b-4127-8e8d-5d5806b7186b.png">
 
 <img width="400" alt="원티드3" src="https://user-images.githubusercontent.com/47774766/177487874-b4b0f1f1-c378-44b3-ab5e-91f1b243022c.png">
-
- 
 
 - 가장 오른쪽 아이콘을 Logout으로 변경해주세요.
 
@@ -201,8 +202,6 @@ const GNBContainer = styled.div`
 
 ## Assignment3 - `Validation`
 
-
-
 - 이메일과 비밀번호의 유효성을 확인합니다.
 
   - 이메일 조건 - `@` , `.` 포함
@@ -214,7 +213,7 @@ const GNBContainer = styled.div`
   - 정규표현식 사용
 
   - Validation 함수 분리
-  
+
 ```jsx
 export const emailValidate = (value) => {
   return /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(
@@ -230,9 +229,7 @@ export const passwordValidate = (value) => {
 };
 ```
 
-  - 로그인 시 이메일과 비밀번호가 등록되어 있는 것과 일치 여부 확인
-
-
+- 로그인 시 이메일과 비밀번호가 등록되어 있는 것과 일치 여부 확인
 
 - Validation 상태를 CSS로 표현해주세요.
 
@@ -248,13 +245,7 @@ export const passwordValidate = (value) => {
 
     Validation Check가 모두 통과된 경우에만 Button 색상을 진하게 변경해주세요. (통과 되지 못한 경우와 구별이 가능해야 합니다.)
 
-
-
-
-
 ## Assignment4 - `Routing`
-
-
 
 - 로그인,로그아웃 시 라우팅 로직을 통해 페이지가 이동 되도록 구현해주세요. (Local Storage)
 
@@ -263,15 +254,15 @@ export const passwordValidate = (value) => {
 - 로그아웃되면 (Local Storage가 삭제되면) Login Page로 이동되어야 합니다.(history push 사용 X)
 
 ```jsx
-    <Routes>
-      <Route path="/" element={<LoginPage />} />
-      <Route path="/main" element={<MainPage />} />
-    </Routes>
+<Routes>
+  <Route path="/" element={<LoginPage />} />
+  <Route path="/main" element={<MainPage />} />
+</Routes>
 ```
 
 ## Assignment5 - `Feeds`
 
-- 레이아웃을 인스타그램과 동일하게 구현해주시면 됩니다. 
+- 레이아웃을 인스타그램과 동일하게 구현해주시면 됩니다.
 
 - Feed는 최소 3개이상 랜더링 되도록 구현해주세요.
 
@@ -308,19 +299,20 @@ export const getFeeds = async () => {
 
 ```jsx
 <PostImg
-   src={postImgUrl}
-   onLoad={() => {
-      setIsLoaded(true);
-   }}
+  src={postImgUrl}
+  onLoad={() => {
+    setIsLoaded(true);
+  }}
 />
 ```
- 
-  - 메인 Page 전체에 반응형 CSS가 적용 되어있는지 평가합니다. (Media Query 사용)
-  
+
+- 메인 Page 전체에 반응형 CSS가 적용 되어있는지 평가합니다. (Media Query 사용)
+
 ```jsx
 @media (max-width: 499px) {
     min-width: 0px;
     width: 95%;
   }
 ```
->>>>>>> 945639f40824f121044d5eb1ff3275e197fc3185
+
+> > > > > > > 945639f40824f121044d5eb1ff3275e197fc3185
