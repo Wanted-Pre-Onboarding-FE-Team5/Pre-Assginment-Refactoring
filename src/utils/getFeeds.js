@@ -7,7 +7,6 @@ export const getFeeds = async () => {
       return res.data;
     })
     .catch((e) => {
-      console.log(e.message);
       return [];
     });
   return result;

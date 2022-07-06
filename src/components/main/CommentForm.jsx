@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { VscSmiley } from 'react-icons/vsc';
 import useInput from '../../utils/hooks/useInput';
-import { whitespaceValidate } from '../../utils/Validator.js';
+import { whitespaceValidate } from '../../utils/validator.js';
 import { uploadComment } from '../../utils/uploadComment';
+import { useRef } from 'react';
 
 const CommentForm = (props) => {
+  const inputRef = useRef(null);
+
   const { comment, feedId } = props;
   const [commentArray, setCommentArray] = useState(comment);
 
@@ -20,22 +23,17 @@ const CommentForm = (props) => {
   let formIsValid = false;
   if (enteredCommentIsValid) formIsValid = true;
 
-  const formsubmissionHandler = (event) => {
-    event.preventDefault();
-
-    setCommentArray((commentValueList) => [...commentValueList, commentInput]);
-    resetCommentInput();
-  };
-
   const uploadButtonClickHandler = (event) => {
+    event.preventDefault();
     const newComment = {
-      //localstorage에서 받아 와야 합니다.
-      userName: 'localhost',
+      userName: window.localStorage.getItem('userEmail'),
       text: commentInput,
     };
     uploadComment(newComment, feedId, () => {
       setCommentArray((comment) => [...comment, newComment]);
     });
+    resetCommentInput();
+    inputRef.current.value = '';
   };
 
   return (
@@ -47,14 +45,14 @@ const CommentForm = (props) => {
         </CommentListContainer>
       ))}
 
-      <CommentInputForm onSubmit={formsubmissionHandler}>
+      <CommentInputForm onSubmit={uploadButtonClickHandler}>
         <VscSmiley size="27" />
         <Input
+          ref={inputRef}
           type="input"
           placeholder="댓글 달기..."
           onChange={commentChangedHandler}
           onBlur={commentBlurHandler}
-          value={commentInput}
         />
         <Button
           type="submit"

@@ -11,10 +11,10 @@ const GlobalStyles = createGlobalStyle`
 
  #root, html, body {
   height : 100%;
-  //text-align: center;
  }
 
  :root {
+    --color-border: #dbdbdb;
     --color-placehloder: #929292;
     --color-GNB-placehloder: #8e8e8e;
     --color-gray: #fafafa;
@@ -22,7 +22,6 @@ const GlobalStyles = createGlobalStyle`
     --color-blue: #bfdffd;
     --color-dark-blue: #0095f6;
     --color-red: #ff3b23;
-    --color-border: #dbdbdb;
     --color-black: #000000;
     --color-white: #ffffff;
   }

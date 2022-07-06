@@ -12,7 +12,9 @@ const Logo = () => {
 export default Logo;
 
 const LogoContainer = styled.div`
-  width: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
 `;
 const LogoImage = styled.img`
   width: 100%;

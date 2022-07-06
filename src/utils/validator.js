@@ -12,6 +12,7 @@ export const passwordValidate = (value) => {
   );
 };
 
+// 공백 문자 제거
 export const whitespaceValidate = (value) => {
   return value.trim() !== '' ? true : false;
 };

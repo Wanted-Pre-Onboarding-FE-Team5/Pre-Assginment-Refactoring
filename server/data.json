@@ -13,8 +13,12 @@
           "text": "abcd"
         },
         {
-          "userName": "localhost",
-          "text": "fff"
+          "userName": "qhtjd2131@nate.com",
+          "text": "a"
+        },
+        {
+          "userName": "qhtjd2131@nate.com",
+          "text": ""
         }
       ]
     },
@@ -25,7 +29,20 @@
       "postImgUrl": "https://source.unsplash.com/random/2080x500",
       "postText": "hi im ddubi. The lorem ipsum is a placeholder text used in publishing and graphic design. This filler text is a short paragraph that contains all the letters of the alphabet. The characters are spread out evenly so that the reader's attention is focused on the layout of the text instead of its content",
       "like": "1,211",
-      "comment": []
+      "comment": [
+        {
+          "userName": "localhost",
+          "text": "sdfasfds"
+        },
+        {
+          "userName": "localhost",
+          "text": "sdfasfdsgfgf"
+        },
+        {
+          "userName": "localhost",
+          "text": "d"
+        }
+      ]
     },
     {
       "id": 3,
@@ -34,7 +51,20 @@
       "postImgUrl": "https://source.unsplash.com/random/700x1080",
       "postText": "everybody say h-e-l-l-o oooo~",
       "like": "2,213",
-      "comment": []
+      "comment": [
+        {
+          "userName": "localhost",
+          "text": "d"
+        },
+        {
+          "userName": "qhtjd2131@nate.com",
+          "text": "12321312321"
+        },
+        {
+          "userName": "qhtjd2131@nate.com",
+          "text": "12321312321adfdsafasdf"
+        }
+      ]
     },
     {
       "id": 4,
@@ -47,6 +77,14 @@
         {
           "userName": "zzzz",
           "text": "abcd"
+        },
+        {
+          "userName": "qhtjd2131@nate.com",
+          "text": "afdsfdasfadsfadsf"
+        },
+        {
+          "userName": "qhtjd2131@nate.com",
+          "text": "afdsfdasfadsfadsfasdfdsfdsaf"
         }
       ]
     },

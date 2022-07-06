@@ -1,10 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
+import { useEffect } from 'react';
+import styled, { css } from 'styled-components';
 import useInput from '../../utils/hooks/useInput';
-import { emailValidate, passwordValidate } from '../../utils/Validator.js';
+import { emailValidate, passwordValidate } from '../../utils/validator.js';
 
 const Input = (props) => {
-  const { setFormIsValid } = props;
+  const { setFormIsValid, setEnteredUserInfo } = props;
 
   const {
     value: enteredEmail,
@@ -23,16 +24,21 @@ const Input = (props) => {
     inputBlurHandler: passwordBlurHandler,
     reset: resetPasswordInput,
   } = useInput(passwordValidate);
-
   let formIsValid = false;
-  if (enteredPasswordIsValid && enteredEmailIsValid) {
-    formIsValid = true;
-    setFormIsValid(true);
-  }
+
+  useEffect(() => {
+    if (enteredPasswordIsValid && enteredEmailIsValid) {
+      formIsValid = true;
+      setFormIsValid(true);
+      setEnteredUserInfo({
+        email: enteredEmail,
+        password: enteredPassword,
+      });
+    }
+  }, [enteredPasswordIsValid, enteredEmailIsValid]);
 
   const formSubmissionHandler = (event) => {
     event.preventDefault();
-    if (!enteredPasswordIsValid) return;
 
     resetEmailInput();
     resetPasswordInput();
@@ -54,7 +60,7 @@ const Input = (props) => {
         id="email"
         onChange={emailChangeHandler}
         onBlur={emailBlurHandler}
-        value={enteredEmail}
+        isValid={emailInputHasError}
       />
       {emailInputHasError && (
         <p className="error-text">이메일 형식이 틀렸습니다.</p>
@@ -65,7 +71,7 @@ const Input = (props) => {
         id="password"
         onChange={passwordChangedHandler}
         onBlur={passwordBlurHandler}
-        value={enteredPassword}
+        isValid={passwordInputHasError}
       />
       {passwordInputHasError && (
         <p className="error-text">
@@ -89,7 +95,14 @@ const InputContainer = styled.div`
 const InputCommon = styled.input`
   width: 100%;
   padding: 0.8rem 0.5rem;
-  border: 1px solid var(--color-border);
+  border: 1px solid;
   border-radius: 3px;
+  border-color: ${(props) =>
+    props.isValid
+      ? css`
+    var(--color-red)
+  `
+      : css`
+    var(--color-border)
+  `};
 `;
-// const InputEmail = styled(InputCommon)``;

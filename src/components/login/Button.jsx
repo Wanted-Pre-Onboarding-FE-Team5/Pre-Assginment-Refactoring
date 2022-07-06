@@ -1,12 +1,12 @@
 import React, { useCallback } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Button = (props) => {
-  const { formIsValid } = props;
-  const buttonClickHandler = useCallback(() => {}, []);
+  const { formIsValid, onClick } = props;
+
   return (
     <ButtonContainer>
-      <LoginButton onClick={buttonClickHandler} disabled={!formIsValid}>
+      <LoginButton onClick={onClick} disabled={!formIsValid}>
         Login
       </LoginButton>
     </ButtonContainer>
@@ -25,6 +25,14 @@ const LoginButton = styled.button`
   font-weight: bold;
   border-radius: 3px;
   cursor: pointer;
-  background-color: var(--color-blue);
   color: var(--color-gray);
+
+  background-color: ${(props) =>
+    props.disabled
+      ? css`
+    var(--color-blue);
+  `
+      : css`
+    var(--color-dark-blue)
+  `};
 `;

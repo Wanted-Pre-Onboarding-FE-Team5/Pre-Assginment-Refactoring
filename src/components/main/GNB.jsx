@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import styled from 'styled-components';
 import Logo from '../common/Logo';
 import { BiSearch } from 'react-icons/bi';
 import { MdHomeFilled } from 'react-icons/md';
 import { FiHeart } from 'react-icons/fi';
 import { CgProfile } from 'react-icons/cg';
+import { useNavigate } from 'react-router-dom';
 
 const GNB = () => {
+  const navigate = useNavigate();
+  const logoutButtonClickHandler = useCallback(() => {
+    window.localStorage.removeItem('userEmail');
+    navigate('/');
+  }, []);
   return (
     <GNBContainer>
       <LogoContainer>
@@ -23,7 +29,7 @@ const GNB = () => {
         <Icon>
           <FiHeart />
         </Icon>
-        <Icon>
+        <Icon onClick={logoutButtonClickHandler}>
           <CgProfile />
         </Icon>
       </GNBIconsContainer>
@@ -83,7 +89,6 @@ const GNBInput = styled.input`
   }
   &::placeholder {
     color: var(--color-GNB-placehloder);
-    //font-weight: lighter;
   }
 `;
 
