@@ -119,7 +119,7 @@ https://www.notion.so/5-5-ba59637024ee4d16bcddea9d0f6777f6
 ## Assignment 1 - `Login`
 
 - 로그인 컴포넌트를 개발합니다. (최소화 - `input` 2개, `button` 1개)
-<img width="400" alt="원티드1" src="https://user-images.githubusercontent.com/87474789/177477628-1ce19014-8a19-4670-87f2-d823127521fc.png">
+<img width="700" alt="원티드1" src="https://user-images.githubusercontent.com/47774766/177487346-f991c3e2-00b8-44fe-99e9-64e2eb12a424.png">
 
 - 약간의 랜더링 최적화를 고려해주세요. (Hint: Ref 사용)
 
@@ -137,9 +137,9 @@ https://www.notion.so/5-5-ba59637024ee4d16bcddea9d0f6777f6
 
 - 로그인 후 이동하는 메인페이지의 GNB를 구현해주세요.
 
-<img width="400" alt="원티드2" src="https://user-images.githubusercontent.com/87474789/177477646-42849578-f607-4bf3-870b-d6f942b92dea.png">
+<img width="700" alt="원티드2" src="https://user-images.githubusercontent.com/47774766/177487668-516a64ca-fe3b-4127-8e8d-5d5806b7186b.png">
 
-<img width="400" alt="원티드3" src="https://user-images.githubusercontent.com/87474789/177477657-99d6f5fb-aa44-457c-91c6-627071050225.png">
+<img width="400" alt="원티드3" src="https://user-images.githubusercontent.com/47774766/177487874-b4b0f1f1-c378-44b3-ab5e-91f1b243022c.png">
 
  
 
@@ -277,7 +277,7 @@ export const passwordValidate = (value) => {
 
 - Feed의 이미지는 자유롭게 사용하시되 각각 사이즈가 각각 달라야 합니다. (ex. 정사각형, 세로가 긴 것, 가로가 긴 것 등)
 
-<img width="500" alt="원티드4" src="https://user-images.githubusercontent.com/87474789/177477664-aecf9651-225b-40b3-b90b-697597ac43e4.png">
+<img width="700" alt="원티드4" src="https://user-images.githubusercontent.com/87474789/177477664-aecf9651-225b-40b3-b90b-697597ac43e4.png">
 
 - 각 Feed의 정보는 public/data 디렉토리에 json형식으로 구성하여 fetch, axios 등을 이용하여 data를 요청해야 합니다.
 
@@ -300,7 +300,7 @@ export const getFeeds = async () => {
 
 - 게시 후 Input은 초기화 되어야 합니다.
 
-<img width="450" alt="원티드5" src="https://user-images.githubusercontent.com/87474789/177477670-b4ededb2-f18f-48ae-a68b-96539ca6c668.png">
+<img width="700" alt="원티드5" src="https://user-images.githubusercontent.com/47774766/177488053-77da2af6-62b8-422f-9578-b58095b20505.png">
 
 - Feeds의 Image가 로딩된 후 컴포넌트가 로딩 되도록 Loading을 구현해 주세요 (로딩바는 없어도 괜찮습니다. Hint: image.onload)
 
