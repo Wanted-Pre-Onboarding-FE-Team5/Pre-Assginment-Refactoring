@@ -124,8 +124,7 @@ npm start
 
 <img width="1043" alt="원티드2" src="https://user-images.githubusercontent.com/87474789/177477646-42849578-f607-4bf3-870b-d6f942b92dea.png">
 
-<img width="591" alt="원티드3" src="https://user-images.githubusercontent.com/87474789/177477657-99d6f5fb-
-aa44-457c-91c6-627071050225.png">
+<img width="591" alt="원티드3" src="https://user-images.githubusercontent.com/87474789/177477657-99d6f5fb-aa44-457c-91c6-627071050225.png">
 
  
 
