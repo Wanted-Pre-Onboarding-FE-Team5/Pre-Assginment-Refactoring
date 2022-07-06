@@ -314,5 +314,3 @@ export const getFeeds = async () => {
     width: 95%;
   }
 ```
-
-> > > > > > > 945639f40824f121044d5eb1ff3275e197fc3185
