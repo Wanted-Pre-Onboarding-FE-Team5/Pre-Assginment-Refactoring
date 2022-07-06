@@ -1,6 +1,44 @@
 # 원티드 프리온보딩 프론트엔드 코스 사전과제 리팩토링 - 5팀 가보작5해보작5팀
 > 5주간의 원티드 프리온보딩 코스에 참여하는 가보작5해보작5팀입니다. (수정예정)
 
+저희 팀은 ‘어떤 기준을 가지고 리팩토링 할 것인가'를 염두에 두고 시작했습니다. 지금은 작은 프로젝트이지만 후에 서비스를 확장하게 된다면 어떤 기능이든 추가하기 용이하도록 방향성을 설정했습니다. 또한 기존의 사전 과제 평가 항목이었던 코드의 일관성, 가독성, 함수 분리 등도 고려하여 코드를 작성하였습니다. 논의 결과 크게 아래와 같은 부분을 수정했습니다.
+
+- 디렉토리 구성
+    - components
+        - 두번 이상 반복된다면 컴포넌트화 하여 재사용성을 높였습니다.
+        - common
+            - Logo.jsx
+        - login
+            - LoginPage에 사용될 컴포넌트들을 명시적으로 분리했고 Login.jsx에 기능을 구현했습니다.
+            - Button.jsx
+            - Login.jsx
+            - Input.jsx
+        - main
+            - MainPage에 사용될 컴포넌트들을 명시적으로 분리했고 Main.jsx에 기능을 구현했습니다.
+            - CommentForm.jsx
+            - Feed.jsx
+            - FeedList.jsx
+            - GNB.jsx
+            - Main.jsx
+    - pages
+        - App.js에 라우팅할 페이지로 구성했습니다.
+        - LoginPage.jsx
+        - MainPage.jsx
+    - utils
+        - custom hook과 각종 함수들을 분리했습니다.
+
+- globalStyles 설정
+    - 전역으로 사용할 속성을 설정했습니다.
+    - 반복되는 속성 (ex. 색상) 을 변수로 지정하여 효율을 높였습니다.
+
+- json server 사용
+    - 새로 업데이트 된 데이터(ex. 댓글)를 렌더링 후에도 보존할 수 있도록 json server를 사용하여 데이터를 받아왔습니다.
+
+- custom hooks 사용
+    - useInput 이라는 custom hook을 만들어 Input을 관리하는 기능을 구현했습니다.
+
+- styled-components 사용
+    - 컴포넌트 재사용성을 고려하여 일반 css가 아닌 styled-components를 사용했습니다.
 
 ![](../header.png)
 
@@ -12,7 +50,7 @@
 ## 개발 환경 설정
 
 ```sh
-make install
+npm install
 npm start
 ```
 
