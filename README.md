@@ -1,31 +1,50 @@
-# :: 원티드 프리온보딩 프론트엔드 코스 사전과제
+# :: 원티드 프리온보딩 프론트엔드 코스 사전과제 리팩토링 - 5팀 가보작5해보작5팀
 
-## Quick Overview
+## Description
+- 어떤 과제 했는지 작성
 
+## 프로젝트 트리구조
+```bash
+📦wanted-pre-onboarding-fe
+ ┣ 📂public
+ ┃ ┣ 📂img
+ ┃ ┃ ┗ 📜logo.png
+ ┃ ┣ 📜favicon.ico
+ ┃ ┣ 📜index.html
+ ┣ 📂server
+ ┃ ┣ 📜data.json
+ ┃ ┗ 📜server.js
+ ┣ 📂src
+ ┃ ┣ 📂components
+ ┃ ┃ ┣ 📂common
+ ┃ ┃ ┃ ┗ 📜Logo.jsx
+ ┃ ┃ ┣ 📂login
+ ┃ ┃ ┃ ┣ 📜Button.jsx
+ ┃ ┃ ┃ ┣ 📜Input.jsx
+ ┃ ┃ ┃ ┗ 📜Login.jsx
+ ┃ ┃ ┗ 📂main
+ ┃ ┃ ┃ ┣ 📜CommentForm.jsx
+ ┃ ┃ ┃ ┣ 📜Feed.jsx
+ ┃ ┃ ┃ ┣ 📜FeedList.jsx
+ ┃ ┃ ┃ ┣ 📜GNB.jsx
+ ┃ ┃ ┃ ┗ 📜Main.jsx
+ ┃ ┣ 📂pages
+ ┃ ┃ ┣ 📜LoginPage.jsx
+ ┃ ┃ ┗ 📜MainPage.jsx
+ ┃ ┣ 📂styles
+ ┃ ┃ ┗ 📜globalStyles.js
+ ┃ ┣ 📂utils
+ ┃ ┃ ┣ 📂hooks
+ ┃ ┃ ┃ ┗ 📜useInput.js
+ ┃ ┃ ┣ 📜getFeeds.js
+ ┃ ┃ ┣ 📜uploadComment.js
+ ┃ ┃ ┗ 📜validator.js
+ ┃ ┣ 📜App.jsx
+ ┃ ┗ 📜index.js
+ ┣ 📜README.md
+ ┣ 📜package-lock.json
+ ┗ 📜package.json
 ```
-npm install
-
-npm start
-```
-
-\*\* React를 구동할 수 있는 기본적인 환경이 필요합니다.
-
-## 진행 가이드
-
-- 위의 Repository를 포크(`fork`) 하여 개발하여 원티드 프리온보딩 프론트엔드 지원 페이지를 통해 제출해주세요.
-- fork 레파지토리 명은 `wanted-pre-onboarding-fe`로 생성해 주세요.
-- 과제 수행 개수에 따라 기본적인 평가가 이루어집니다.
-- 코드의 일관성, 가독성, 함수 분리,컴포넌트 설계, 코드 퀄리티 등을 기준으로 세부적인 평가가 이루어집니다.
-- 해당 과제에 대한 해설은 개강 후 진행될 예정입니다.
-- 선발하는 과정에서 최소한의 수준을 평가하기 위한 과제로 아래 Assignment 외 다른 부분을 완벽하게 구현하지 않으셔도 됩니다. (평가에 반영하지 않습니다.)
-- README.md를 꼭 작성해 주세요. 본인에 대한 소개나 과제 풀이에 관한 것 등 자유롭게 작성해주시면 됩니다.
-- 함수형 컴포넌트로 개발해주세요. (React Hooks)
-
-\*문의 사항은 사전 과제 Repository의 Issue로 등록해 주세요.
-
-# :: 과제 안내
-
----
 
 ## Assignment 1 - `Login`
 
@@ -86,7 +105,3 @@ npm start
 - Feeds의 Image가 로딩된 후 컴포넌트가 로딩 되도록 Loading을 구현해 주세요 (로딩바는 없어도 괜찮습니다. Hint: image.onload)
   - (아이콘은 자유롭게 사용하셔도 괜찮습니다. icon 라이브러리 설치 O)
   - 메인 Page 전체에 반응형 CSS가 적용 되어있는지 평가합니다. (Media Query 사용)
-
-## 참고 이미지
-
-[참고 이미지 링크](https://bclef25.notion.site/1ed6d5b2192b45eeb4104a67f6a77250)
